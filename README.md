@@ -1,7 +1,7 @@
-# Teste para desenvolvedor Full Stack Júnior
+# Teste para desenvolvedor Full Stack
 
 
-Então, quer dizer que você gosta de desafios e quer se tornar um desenvolvedor full-stack júnior na Annexus? Está no lugar certo!
+Então, quer dizer que você gosta de desafios e quer se tornar um desenvolvedor full-stack na Annexus? Está no lugar certo!
 
 Este teste faz parte do nosso processo de seleção e é a sua chance de nos mostrar todo o seu conhecimento como desenvolvedor.
 
