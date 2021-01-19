@@ -1,0 +1,30 @@
+<mat-card>
+  <div>
+    <label for="txtNome" class="form-control">Nome: </label>
+    <input
+      type="text"
+      name="nome"
+      id="nome"
+      value=""
+      [(ngModel)]="grupo.nome"
+    />
+  </div>
+  <br />
+  <div>
+    <div class="form-check">
+      <mat-checkbox [(ngModel)]="grupo.ativo" name="ativo" ngDefaultControl>
+          Ativo
+        </mat-checkbox>
+    </div>
+  <br />
+  </div>
+
+  <button
+    type="button"
+    mat-raised-button
+    (click)="cadastraGrupo(grupo)"
+  >
+    Incluir
+  </button>
+  <button type="button" mat-raised-button (click)="cancelar()">Cancelar</button>
+</mat-card>

@@ -1,0 +1,62 @@
+<a mat-button routerLink="/cadastrar" >Cadastrar Cliente</a><br/>
+<a mat-button routerLink="/cadastrarGrupo">Cadastrar Grupo de Cliente</a><br/>
+<a mat-button routerLink="/busca">Localizar cliente</a><br/>
+
+<div class="mat-elevation-z4">
+  <table mat-table [dataSource]="clientes" matSort>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Nome">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let row">{{row.nome}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Cpf">
+      <th mat-header-cell *matHeaderCellDef>Cpf</th>
+      <td mat-cell *matCellDef="let row">{{ row.cpf }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="DataCadastro">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Data do cadastro</th>
+      <td mat-cell *matCellDef="let row">{{ row.dataCadastro | date: "dd/MM/yyyy"}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="grupoCliente">
+      <th mat-header-cell *matHeaderCellDef>Grupo do cliente</th>
+      <td mat-cell *matCellDef="let row">{{ row.grupoCliente }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Ativo">
+      <th mat-header-cell *matHeaderCellDef>Ativo?</th>
+      <td mat-cell *matCellDef="let row">{{ row.ativo }}</td>
+    </ng-container>
+    colunasExibidas
+    <ng-container matColumnDef="Telefone">
+      <th mat-header-cell *matHeaderCellDef>Telefone</th>
+      <td mat-cell *matCellDef="let row"><td mat-cell *matCellDef="let row">{{ row.telefone }}</td>
+    </ng-container>er>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
+      <td mat-cell *matCellDef="let row">
+          <a routerLink="/atualizar/{{ row.id }}" class="edit">
+              <i class="material-icons">
+                  Editar
+              </i>
+          </a>
+          <a routerLink="/excluir/{{ row.id }}" class="delete">
+              <i class="material-icons">
+                  Excluir
+              </i>
+          </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="colunasExibidas"></tr>
+    <tr mat-row *matRowDef="let row; columns: colunasExibidas;"></tr>
+  </table>
+</div>
