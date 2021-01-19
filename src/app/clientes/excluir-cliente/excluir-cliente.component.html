@@ -1,0 +1,62 @@
+<mat-card>
+  <mat-card-title
+    >Confirmar exclusão do cliente?</mat-card-title
+  >
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Id do cliente"
+        [value]="cliente.id"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Nome"
+        [value]="cliente.nome"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Cpf"
+        [value]="cliente.cpf"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Data do Cadastro"
+        [value]="cliente.dataCadastro"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Grupo"
+        [value]="cliente.grupoCliente"
+        disabled
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Telefone"
+        [value]="cliente.telefone"
+        disabled
+      />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="excluir()" color="warn">
+    Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancelar()" color="primary">
+    Cancelar
+  </button>
+</mat-card>
